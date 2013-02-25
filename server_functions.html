@@ -1,0 +1,17 @@
+<%
+
+op_type = Int(Request.Form.GetProperty("op_type"));
+if (op_type==00) {
+	try{
+		path = "x-local://wt/web/webtutor/RS/js/data.js"; 
+		data = Request.Form.GetProperty("data");
+		PutUrlData(path, "data = " + data);
+	} catch(err) {
+		%><%=err%><%
+	}
+}
+if (op_type==01) {
+	avatars = ReadDirectory("x-local://wt/web/webtutor/RS/avatars");
+	%><%=avatars.join(":::")%><%
+}
+%>
