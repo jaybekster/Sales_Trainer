@@ -1,0 +1,209 @@
+﻿<!DOCTYPE >
+
+<meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1"> 
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8"> 
+  <script type="text/javascript" src="js/data.js"></script>
+
+	  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="theme/jquery-ui.css">
+
+
+	<title>Русский Стандарт: Тренажер продаж №1</title>
+	
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/34gs.css">
+  <link rel="stylesheet" href="css/34gs-queries.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">	
+</head>
+<body class="js">
+  <div id="first_page" class="jqmWindow">
+    <div class="close"><span></span></div>
+    <div class="title"></div>
+    <div class="text">
+      <img src="img/RS-97.png">
+    </div>
+      <a id="begin" class="dButton"></a>
+  </div>
+  <div id="finish_queue" class="jqmWindow">
+    <div class="text">
+      <p id="percent_result"></p>
+      <p id="vam_udalos_ubedit"></p>
+      <a id="close_course"></a>
+      <a id="restart_course"></a>
+    </div>
+  </div>
+  <div id="instruction_popup" class="jqmWindow">
+    <div class="text">
+      <p>Добро пожаловать в тренажер продаж Банка Русский Стандарт!</p>
+      <p>В данном тренажере вам предстоит обслужитьва клиентов, обратившихся в отделение банка за услугой или продуктом.</p>
+      <a id="continue_course"></a>
+    </div>
+  </div>
+  <div id="about_popup" class="jqmWindow">
+    <div class="close"><span>X</span></div>
+    <div class="title">О курсе</div>
+    <div class="text">
+      <p>Добро пожаловать в тренажер продаж Банка Русский Стандарт!</p>
+      <p>В данном тренажере вам предстоит обслужитьва клиентов, обратившихся в отделение банка за услугой или продуктом.</p>
+      <p>Успешным выполнением тренажера является подбор корректного продукта каждому из предлложенных клиентов. Для подбора продуктов вам необходимо задавать клиенту уточняющие воросы, выбирая их из предложенных в правой части экрана и основываясь на его ответах пребложить наиблее подходящий продукт, для этого необходимо перейти к списку продуктов, кликнув по кнопке "Предложить продукт" и выбрать продукт.</p>
+    </div>
+  </div>
+  <div id="help_popup" class="jqmWindow">
+    <div class="close"><span>X</span></div>
+    <div class="title"></div>
+    <div class="text">
+      <p>Добро пожаловать в тренажер продаж Банка Русский Стандарт!</p>
+      <p>В данном тренажере вам предстоит обслужитьва клиентов, обратившихся в отделение банка за услугой или продуктом.</p>
+      <p>Успешным выполнением тренажера является подбор корректного продукта каждому из предлложенных клиентов. Для подбора продуктов вам необходимо задавать клиенту уточняющие воросы, выбирая их из предложенных в правой части экрана и основываясь на его ответах пребложить наиблее подходящий продукт, для этого необходимо перейти к списку продуктов, кликнув по кнопке "Предложить продукт" и выбрать продукт.</p>
+    </div>
+      <a id="begin" class="dButton"></a>
+  </div>
+  <div class="jqmWindow" id="jqmWindow">
+    <div class="close"><span>X</span></div>
+    <div class="title"></div>
+    <div class="text">
+      
+    </div>
+      <a class="dButton"></a>
+  </div>
+  <div class="container">
+
+    <!--row of 5's-->
+    <div class="row">
+
+      <div class="col_1 header">
+        <img src="img/image.png" />
+        <!--<span><img src="img/bar1.png" /><img src="img/bar1.png" /></span>-->
+      </div>
+    </div>
+    <div class="row" style="height:100%;position:absolute;">
+
+      <div class="col_2">    
+
+      <div class="rectangle-1">
+
+
+    <div class="row">
+        <div class="col_2 status"> <img class="face " data-face="" src=""><span class="icon">L</span><div class="name" >Иван Захарушко
+        </div>
+        <div id="status"><div></div>
+        </div>
+        <div id="allow_credit">
+        </div>
+      </div>
+        <div class="col_2"><div class="responce">
+          <img src="img/answer.png" alt="">
+          <span>Ответ</span></div></div>
+    </div>
+    <div class="row">
+        <div class="col_1"><div class="thoughts">Мысли + моментальный фидбек</div></div>
+
+    </div>
+    <div class="row" style="width:300px;">
+        <div style="width:250px;">Настроение: <div class="progress mood" style="display:inline-block;"><span></span></div><span style="position:absolute;margin-top:15px;">0</span></div>
+    </div>
+      </div> 
+   <div class="col_2 header">      
+      <div class="flat-button-3 giveprod">
+      </div>
+        <div class="flat-button-3 nextClient">
+          <div></div>
+      </div></div>
+    </div>
+      <div class="col_2">      
+
+      <div class="col_2 header">
+        <div class="rectangle-2">
+        <h2> <span id="clock" class="icon"></span><span>02:00</span></h2>       
+        <h2> <span id="queue" class="icon"></span><span>25</span></h2>
+        <div id="qpersons">
+          
+        </div>
+      </div></div>
+
+
+<div class="rectangle"><ul class="products">
+
+    <!--<li>Кредиты
+<ul class="subclass">
+  <li data-pr_name="prod1">Продукт 1<span class="icon info">"</span></li>
+  <li data-pr_name="prod2">Продукт 2<span class="icon info">"</span></li>
+
+</ul>
+    </li>
+    <li>Ипотека
+<ul class="subclass">
+  <li data-pr_name="prod3">Продукт 3<span class="icon info">"</span></li>
+  <li data-pr_name="prod4">Продукт 4<span class="icon info">"</span></li>
+
+</ul></li>
+
+    <li>Пожизненные долги
+      <ul class="subclass">
+  <li data-pr_name="prod5">Продукт 5<span class="icon info">"</span></li>
+  <li data-pr_name="prod6">Продукт 6<span class="icon info">"</span></li>
+  </ul>
+    </li>-->
+
+      <li class="closeP icon">Â</li>
+  </ul>
+  <div class="stats">
+ Показатели клиента 
+      <span class="closeS icon">Â</span>
+  <ul>
+    <li>Терпение: <div class="progress patience"><span></span></div><span>0</span></li>
+    <li>Лояльность: <div class="progress loyalty"><span></span></div><span>0</span></li>
+    <li>Знание продуктов: <div class="progress competence"><span></span></div><span>0</span></li>
+  </ul>
+</div>
+<div class=" questions"></div></div> 
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="col_2 footer">
+        <div id="help"></div>
+        <div id="about"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      
+    </div>
+
+    <!--row of 1 (single column)-->
+    <!--<div class="row footer">
+
+      <div class="col_1">Банк Русский Стандарт. 2012 ©. Powered by E-learning Center.</div>
+
+    </div>-->
+
+  </div><!--eof container-->
+
+
+
+
+
+
+
+    <script src="js/SCORM_API_wrapper.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/j_Plugins.js"></script>
+    <script src="js/jquery.imgpreload.min.js"></script>
+    <script src="js/taffy.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jqModal.js"></script>
+  </body>
+</html>
+
+

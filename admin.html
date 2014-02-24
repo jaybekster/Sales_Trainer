@@ -1,0 +1,234 @@
+<!DOCTYPE>
+<script>
+	document.createElement("section");
+	document.createElement("article");
+	document.createElement("header");
+	document.createElement("footer");
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/j_Plugins.js"></script>
+<script src="js/taffy.js"></script>
+<script src="js/json2-min.js"></script>
+<script src="js/jquery.qtip.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jqModal.js"></script>
+<script src="js/jquery.jeditable.mini.js"></script>
+<script src="js/data.js"></script>
+<link rel="stylesheet" type="text/css" href="css/admin_style.css">
+<head>
+	<meta charset="utf-8"/>
+	<title>Адмнистрирование курса</title>
+	<style type="text/css"></style>
+</head>
+<html>
+<body>
+<header>
+	<img src="img/image.png" width="100px"/>
+	<nav>
+		<a id="client_settings" class="active"></a>
+		<a id="trainer_settings"></a>
+		<a id="products_settings"></a>
+		<a id="questions_settings"></a>
+	</nav>
+	<img id="save_true" src="img/save_true.png">
+	<img id="save_false" src="img/save_false.png">
+</header>
+
+<div class="jqmWindow" id="photo_list">
+	<div class="photos">
+
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+<div class="jqmWindow" id="product_list">
+	<div class="products">
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+<div class="jqmWindow" id="question_list">
+	<div class="questions">
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+<div class="jqmWindow" id="product_edit">
+	<div class="product">
+		<input class="name"/>
+		<textarea class="desc"></textarea>
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+<div class="jqmWindow" id="product_add">
+	<div class="product">
+		<input class="name" placeholder="Название продукта"/>
+		<textarea class="desc" placeholder="Описание продукта"></textarea>
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+<div class="jqmWindow" id="question_edit">
+	<div class="question">
+		<textarea class="text"></textarea>
+		<input class="answer_0"/>
+		<input class="answer_1"/>
+		Сложность вопроса <select class="difficult">
+			<option val="1">1</option>
+			<option val="2">2</option>
+			<option val="3">3</option>
+			<option val="4">4</option>
+			<option val="5">5</option>
+		</select>
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+<div class="jqmWindow" id="question_add">
+	<div class="question">
+		<textarea class="text"  placeholder="Текст вопроса"></textarea>
+		<input class="answer_0" placeholder="Положительный ответ"/>
+		<input class="answer_1" placeholder="Отрицательный ответ"/>
+		<select class="difficult">
+			<option val="1">1</option>
+			<option val="2">2</option>
+			<option val="3">3</option>
+			<option val="4">4</option>
+			<option val="5">5</option>
+		</select>
+	</div>
+	<button class="save_popup">Сохранить</button>
+	<button class="close_popup">Закрыть</button>
+</div>
+
+<div id="p1">
+<div class="top_column">
+	<ul style="width:100%;">
+		<!--<li class="change"></li>-->
+		<li class="save"></li>
+		<li class="add"></li>
+		<li class="remove"></li>
+	</ul>
+	<ul style="margin-top:10px;">
+		<li id="prevClient"><div ></div></li>
+		<li class="clients">
+			<ul></ul>
+		</li>
+		<li id="nextClient"><div></div></li>
+	</ul>
+</div>
+
+<div class="left_column">
+	<label>ID клиента</label>
+	<span id="client_id"></span>
+	<div class="photo">
+			<img src="" alt="Кликните для изменения"/>
+		</div>
+	<label>Фамилия Имя</label>
+	<input class="name" type="text"/>
+	<ul>Стартовые значения показателей клиента
+		<li class="mood"><img src="img/RS-37.png"><input id="mood" type="text"/>%
+			<span class="text">Настроение</span>
+		</li>
+		<!--<li class="patience"><img src="RS-38.png"><input id="patience" type="text"/> Терпение</li>-->
+		<li class="patience"><img src="img/RS-38.png">
+			<span class="block_container">
+				<div></div><div></div><div></div><div></div><div></div>
+			</span>
+			<span class="text">Терпение</span></li>
+		<li class="loyalty"><img src="img/RS-37.png">
+			<span class="block_container">
+				<div></div><div></div><div></div><div></div><div></div>
+			</span>
+			<span class="text">Лояльность</span></li>
+		<li class="competence"><img src="img/RS-37.png">
+			<span class="block_container">
+				<div></div><div></div><div></div><div></div><div></div>
+			</span>
+			<span class="text">Осведомлённость</span>
+		</li>
+	</ul>
+	<label class="ul">Список продуктов.</label>
+	<ul id="products">
+		<li>Изменить</li>
+	</ul>
+	<ul class="feedback">
+		<li>Обратная связь по предложенному продукту</li>
+	</ul>
+	<ul class="timesout">
+		<li>Время консультирования истекло</li>
+		<li></li>
+	</ul>
+</div>
+<div class="right_column">
+	<div>
+		<label>Карточка клиента</label>
+		<div class="photo">
+			<img src="" />
+		</div>
+		<label class="name">Фамилия Имя</label>
+		<ul class="indicators">
+			<li class="mood">Настроение<div class="progress"><span></span></div></li>
+			<li class="patience">Терпение<div class="progress"><span></span></div></li>
+			<li class="loyalty">Лояльность<div class="progress"><span></span></div></li>
+			<li class="competence">Осведомлённость<div class="progress"><span></span></div></li>
+		</ul>
+		<ul class="products"></ul>
+	</div>
+	<ul class="questions">Список вопросов.
+		<li><div>Изменить</div></li>
+	</ul>
+</div>
+</div>
+
+<div id="p2">
+	<div class="top_column">
+		<ul style="width:100%;">
+			<li class="save"></li>
+			<li><a id="is_random_queue"></a></li>
+		</ul>
+	</div>
+	<div class="left_column">
+		<!--<label>Количество клиентов</label>
+		<div id="clients_count">
+			<img src="img/RS-48.png"><span id="clients_number">0</span>
+		</div>
+	-->
+		<ul id="drag">Список клиентов</ul>
+	</div>
+
+	<div class="right_column">
+		<ul id="drop">Очередь клиентов</ul>
+	</div>
+</div>
+<div id="p3">
+	<div class="top_column">
+		<ul>
+			<!--<li class="change"></li>-->
+			<li class="add"></li>
+			<!--<li class="remove"></li>-->
+		</ul>
+	</div>
+	<div class="left_column">
+		<ul>
+		</ul>
+	</div>
+</div>
+<div id="p4">
+	<div class="top_column">
+		<ul>
+			<!--<li class="change"></li>-->
+			<li class="add"></li>
+			<!--<li class="remove"></li>-->
+		</ul>
+	</div>
+	<div class="left_column">
+		<ul>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="js/admin_script.js"></script>
